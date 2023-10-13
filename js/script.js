@@ -1,10 +1,10 @@
 
-function generateGrid() {
+function generateGrid(gridSize) {
 
     const gridWrapper = document.getElementById("grid-wrapper")
     gridWrapper.innerHTML = ""
 
-    for (i = 0; i < 100; i++) {
+    for (i = 0; i < gridSize; i++) {
         const box = document.createElement("div")
         gridWrapper.append(box)
         box.className = "tile"
@@ -18,7 +18,7 @@ function cliccableTiles() {
 
     tiles.forEach(function (tile, i) {
         tile.addEventListener("click", function () {
-            tile.style.backgroundColor = "rgba(66, 45, 200, 0.5)"
+            tile.classList.toggle("selected")
             console.log(i + 1)
         })
     })
@@ -27,7 +27,7 @@ function cliccableTiles() {
 
 document.getElementById("play-button").addEventListener("click", function () {
 
-    generateGrid()
+    generateGrid(100)
     cliccableTiles()
 
 })
