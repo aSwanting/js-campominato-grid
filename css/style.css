@@ -15,10 +15,21 @@
 .grid-wrapper {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(10, 1fr);    
-    max-width: 600px;   
+    max-width: 600px;
     flex-grow: 1;
-    margin: 0 auto;    
+    margin: 0 auto;
+}
+
+.grid-49 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-81 {
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.grid-100 {
+    grid-template-columns: repeat(10, 1fr);
 }
 
 .app-toolbar {

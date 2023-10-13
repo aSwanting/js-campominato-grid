@@ -2,6 +2,7 @@
 function generateGrid(gridSize) {
 
     const gridWrapper = document.getElementById("grid-wrapper")
+    gridWrapper.className = "grid-wrapper grid-" + gridSize
     gridWrapper.innerHTML = ""
 
     for (i = 0; i < gridSize; i++) {
@@ -27,7 +28,14 @@ function cliccableTiles() {
 
 document.getElementById("play-button").addEventListener("click", function () {
 
-    generateGrid(100)
+    const difficulty = parseInt(document.getElementById("level-select").value)
+
+    let gridSize
+
+    !difficulty ? gridSize = 49 : difficulty === 1 ? gridSize = 81 : gridSize = 100
+
+
+    generateGrid(gridSize)
     cliccableTiles()
 
 })
