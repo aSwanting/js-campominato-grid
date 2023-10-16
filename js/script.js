@@ -32,7 +32,7 @@ document.getElementById("play-button").addEventListener("click", function () {
 
     let gridSize
 
-    !difficulty ? gridSize = 49 : difficulty === 1 ? gridSize = 81 : gridSize = 100
+    !difficulty ? gridSize = 100 : difficulty === 1 ? gridSize = 81 : gridSize = 49
 
 
     generateGrid(gridSize)
